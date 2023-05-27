@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
-const port = process.env.PORT || 5001
+const port = process.env.PORT || 443
 const fileUpload = require('express-fileupload')
 
 
@@ -40,6 +40,8 @@ app.use(fileUpload({
 const corsOptions = {
   origin: 'https://symphonious-lily-d24c48.netlify.app/',
 };
+
+app.use(cors(corsOptions));
 // routes ---------------------------------
 
 app.get('/', (req,res) => {
