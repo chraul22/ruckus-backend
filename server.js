@@ -37,6 +37,14 @@ app.use(fileUpload({
   limits: { fileSize: 50 * 1024 * 1024 }
 }))
 
+// routes-----------------------------
+
+// homepage
+app.get('/', (req,res) =>{
+res.send ("home")
+})
+
+
 // auth
 const authRouter = require('./routes/auth')
 app.use('/auth', authRouter)
