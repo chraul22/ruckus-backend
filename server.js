@@ -40,8 +40,8 @@ app.use(fileUpload({
 // routes-----------------------------
 
 // homepage
-app.get('/', (req, res) => {
- })
+// app.get('/', (req, res) => {
+//  })
 
 
 // auth
