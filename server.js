@@ -36,10 +36,14 @@ app.use(fileUpload({
   limits: { fileSize: 50 * 1024 * 1024 }
 }))
 
+// CORS configuration
+const corsOptions = {
+  origin: 'https://symphonious-lily-d24c48.netlify.app/',
+};
 // routes ---------------------------------
 
 app.get('/', (req,res) => {
-res.send("Homepage")
+res.send("Home")
 
 })
 
