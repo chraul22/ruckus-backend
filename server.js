@@ -57,5 +57,5 @@ app.use('/', articlesRouter)
 
 // run app listen on port --------------------
 app.listen(port, () => {
-  console.log("App running on port ", port)
+  console.log("App running on port ", 'https://cauld-ruckus-backend.herokuapp.com/')
 })
