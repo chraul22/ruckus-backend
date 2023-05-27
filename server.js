@@ -4,6 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const port = process.env.PORT || 3000
+const path = require ('path')
 const fileUpload = require('express-fileupload')
 
 
@@ -17,7 +18,7 @@ mongoose.connect(process.env.MONGO_URI, {
     .catch(err => console.error("db connection failed ", err))
 
   // articles database connection -------------
-const articlesConnection = mongoose.createConnection(process.env.ARTICLES_MONGO_URI, {
+ mongoose.createConnection(process.env.ARTICLES_MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: true,
