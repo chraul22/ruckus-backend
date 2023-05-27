@@ -50,6 +50,10 @@ const articlesRouter = require('./routes/article')
 app.use('/', articlesRouter)
 
 // run app listen on port --------------------
+// app.listen(port, () => {
+//   console.log("App running on ", 'http://localhost:3000');
+// });
+
 app.listen(port, () => {
   console.log("App running on ", 'https://cauld-ruckus-backend.herokuapp.com/');
 });
