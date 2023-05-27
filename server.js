@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
-const port = process.env.PORT || 443
+const port = process.env.PORT || 3000
 const fileUpload = require('express-fileupload')
 
 
@@ -35,19 +35,6 @@ app.use('*', cors())
 app.use(fileUpload({
   limits: { fileSize: 50 * 1024 * 1024 }
 }))
-
-// CORS configuration
-const corsOptions = {
-  origin: 'https://symphonious-lily-d24c48.netlify.app/',
-};
-
-app.use(cors(corsOptions));
-// routes ---------------------------------
-
-app.get('/', (req,res) => {
-res.send("Home")
-
-})
 
 // auth
 const authRouter = require('./routes/auth')
