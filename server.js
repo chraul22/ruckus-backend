@@ -39,7 +39,7 @@ app.use(fileUpload({
 // routes ---------------------------------
 
 app.get('/', (req,res) => {
-res.send("Home")
+res.send("Homepage")
 
 })
 
